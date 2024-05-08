@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+// Import necessary details
+import React from 'react';
+import { Container } from '@chakra-ui/react';
+import SearchBar from './components/SearchBar';
 
+// Function component for App
 function App() {
+  // Return  with Container component and SearchBar component
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxW="container.md" centerContent> {/* Container component */}
+      <SearchBar /> {/* SearchBar component */}
+    </Container>
   );
 }
+
 
 export default App;
