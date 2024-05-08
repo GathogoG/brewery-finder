@@ -903,3 +903,29 @@ const breweries = [
         "street": "2045 N Forbes Blvd Ste 105"
       }
 ]
+
+function SearchBar (){
+    const [searchTerm, setSearchTerm] = useState('')
+
+    const filteredBreweries = breweries.filter(brewery =>
+    brewery.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase)())
+    return (
+        <Box p={5}>
+          <VStack spacing={5}>
+            <Input
+              placeholder="Search for a brewery by name"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            {filteredBreweries.map((brewery) => (
+              <Box key={brewery.id} p={3} shadow="md" borderWidth="1px">
+                <Text fontSize="lg">{brewery.name}</Text>
+                <Text fontSize="sm">Type: {brewery.brewery_type}</Text>
+              </Box>
+            ))}
+          </VStack>
+        </Box>
+      );
+}
+
+export default SearchBar
