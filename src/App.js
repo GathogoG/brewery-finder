@@ -1,17 +1,31 @@
-// Import necessary details
 import React from 'react';
-import { Container } from '@chakra-ui/react';
-import SearchBar from './components/SearchBar';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import BreweryFilter from './BreweryFilter';
 
 // Function component for App
 function App() {
   // Return  with Container component and SearchBar component
   return (
-    <Container maxW="container.md" centerContent> {/* Container component */}
-      <SearchBar /> {/* SearchBar component */}
-    </Container>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Welcome to Brewery Finder</h1>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Breweries</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<BreweryFilter />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
-
 
 export default App;
