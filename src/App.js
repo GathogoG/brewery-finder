@@ -2,7 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import BreweryFilter from './BreweryFilter';
 
+// Function component for App
 function App() {
+  // Return  with Container component and SearchBar component
   return (
     <Router>
       <div className="App">
