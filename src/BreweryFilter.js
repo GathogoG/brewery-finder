@@ -38,7 +38,7 @@ const BreweryFilter = () => {
       </select>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
         {breweries.map(brewery => (
-          <div key={brewery.id} style={{ padding: '20px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)', border: '1px solid #ccc' }}>
+          <div key={brewery.id} style={{ padding: '20px', boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.1)', border: '1px solid #ccc' }}>
             <h3>{brewery.name}</h3>
             <p>Location: {brewery.city}, {brewery.state}</p>
             <p>Type: {brewery.brewery_type}</p>
