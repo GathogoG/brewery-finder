@@ -11,7 +11,7 @@
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #f8f9fa; /* Light gray background color */
+  background-color:blue; /* Light gray background color */
 }
 
 .card-title {
