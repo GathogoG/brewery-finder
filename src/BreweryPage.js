@@ -1,22 +1,38 @@
-import breweries from './db.json'
-import React from 'react'
+import brewerys from './db.json'
+//import React from 'react'
 import './App.css';
 import {  Input  } from "@chakra-ui/react";
+import React, { useState } from "react";
+import FilterComponent from './FilteredComponent';
+//import BreweryFilter from './BreweryFilter';
 
 function BreweryPage() {
-    // const [search, setSearch] = useState(""); // Initialize state for search input value
-    // const filteredBreweries = breweries.filter((brewery) =>
-    //   brewery.name.toLowerCase().includes(search.toLowerCase())
-    // ); // Filter breweries based on search input value
+     const [search, setSearch] = useState(""); // Initialize state for search input value
+     const [filter, setFilter] = useState("");
+
+
+     function handleSearch (event) {
+      setSearch(event.target.value)
+    };
+
+    const breweries = brewerys.filter(brewery =>
+      brewery.name.toLowerCase().includes(search.toLowerCase()) &&
+      (filter === "" || brewery.state === filter)
+    );
+  
+
     return (
 <>
-<Input
-            placeholder="Search for a brewery" // Search input placeholder text
-            //value={search}
-            // onChange={(e) => setSearch(e.target.value)} // Handle input change to update search state
-          />
+<div>
+  <Input
+    placeholder="Search for a brewery" // Search input placeholder text
+    // value={search}
+     onChange={handleSearch} // Handle input change to update search state
+  />
+</div>
 
-
+<FilterComponent items={brewerys} setFilter={setFilter} />
+{/* <BreweryFilter/> */}
       <div className="card-container">
         {breweries.map((brewery) => (
           <div className="card" key={brewery.id}>
