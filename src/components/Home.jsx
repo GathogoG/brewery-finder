@@ -1,16 +1,13 @@
 // Home.jsx
 import React from 'react';
+import './App.css'
 
 function Home() {
-    // const handleClick = () => {
-    //     alert('You clicked on the Home page!');
-    // };
-
     return (
-        <div className='p'>
-            <h2 className='text-white'>Home</h2>
-            <p className='text-white'>Welcome to the Home page</p>
-       
+        <div className='home-container'>
+            <h2 className='title'>THE BREWERIES</h2>
+            <p className='subtitle'>Having Unique Beer Experiences</p>
+            {/* Additional content can be added here */}
         </div>
     );
 }
