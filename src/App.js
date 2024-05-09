@@ -1,12 +1,10 @@
 // App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BreweryFilter from './BreweryFilter';
 import Navbar from './components/NavBar';
 import Home from './components/Home';
-import AboutUs from './components/About';
-import Contact from './components/Contacts';
-import BreweryPage from './BreweryPage'; // Import Contact component
+import AboutUs from './components/Abou';
+import Contact from './components/Contacts'; // Import Contact component
 
 function App() {
   return (
@@ -28,25 +26,25 @@ function App() {
       <BreweryPage />
     </Router>
   );
-  // const [breweries, setBreweries] = useState([]);
+  const [breweries, setBreweries] = useState([]);
   //Function to fetch data
-  // function fetchData() {
-  //   return fetch('http://localhost:3000/breweries', {
-  //     method: 'GET',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   })
-  //     .then((resp) => resp.json())
-  //     .then((data) => {
-  //       setBreweries(data);
-  //     });
-  // }
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-  // return <div>
+  function fetchData() {
+    return fetch('http://localhost:3000/breweries', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setBreweries(data);
+      });
+  }
+  useEffect(() => {
+    fetchData();
+  }, []);
+  return <div>
 
-  // </div>;
+  </div>;
 }
 export default App;

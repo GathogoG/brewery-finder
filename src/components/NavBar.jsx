@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Home';
-import AboutUs from './Abou';
+import AboutUs from './About';
 import Contact from './Contacts';
+import './App.css';
 
-function NavBarWithPages() {
+function NavBar() {
   return (
     <Router>
       <div>
@@ -32,4 +33,4 @@ function NavBarWithPages() {
   );
 }
 
-export default NavBarWithPages;
+export default NavBar;
