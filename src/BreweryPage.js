@@ -1,9 +1,22 @@
 import breweries from './db.json'
 import React from 'react'
 import './App.css';
+import {  Input  } from "@chakra-ui/react";
 
 function BreweryPage() {
+    // const [search, setSearch] = useState(""); // Initialize state for search input value
+    // const filteredBreweries = breweries.filter((brewery) =>
+    //   brewery.name.toLowerCase().includes(search.toLowerCase())
+    // ); // Filter breweries based on search input value
     return (
+<>
+<Input
+            placeholder="Search for a brewery" // Search input placeholder text
+            //value={search}
+            // onChange={(e) => setSearch(e.target.value)} // Handle input change to update search state
+          />
+
+
       <div className="card-container">
         {breweries.map((brewery) => (
           <div className="card" key={brewery.id}>
@@ -11,7 +24,7 @@ function BreweryPage() {
               <h5 className="card-title">{brewery.name}</h5>
               <h6 className="card-subtitle">{brewery.brewery_type}</h6>
               <p className="card-text">
-                {brewery.address}<br />
+              {brewery.address_1},{brewery.address_2},{brewery.address_3}<br />
                 {brewery.city}, {brewery.state}, {brewery.postal_code}<br />
                 Country: {brewery.country}<br />
                 Latitude: {brewery.latitude}, Longitude: {brewery.longitude}
@@ -22,6 +35,7 @@ function BreweryPage() {
           </div>
         ))}
       </div>
+      </>
     );
   }
   
