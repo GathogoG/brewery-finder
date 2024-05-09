@@ -43,7 +43,7 @@ const BreweryFilter = () => {
               <h5 className="card-title">{brewery.name}</h5>
               <h6 className="card-subtitle">{brewery.brewery_type}</h6>
               <p className="card-text">
-                {brewery.address}<br />
+              {brewery.address_1},{brewery.address_2},{brewery.address_3}<br />
                 {brewery.city}, {brewery.state}, {brewery.postal_code}<br />
                 Country: {brewery.country}<br />
                 Latitude: {brewery.latitude}, Longitude: {brewery.longitude}
