@@ -8,7 +8,7 @@ import './App.css';
 function NavBar() {
   return (
     <Router>
-      <div>
+      <div className='bg-pink'>
         <nav>
           <ul style={{ display: 'flex', listStyleType: 'none', padding: 0 }}>
             <li style={{ marginRight: '10px' }}>
