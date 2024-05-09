@@ -46,6 +46,8 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
-  return <div></div>;
+  return <div>
+
+  </div>;
 }
 export default App;
