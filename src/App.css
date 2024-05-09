@@ -1,19 +1,31 @@
+.card-body{
+  background-color: #e57811;
+}
+
+.p{
+  background-color: #032549;
+}
+.upperPart{
+  align-items: center;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px; /* Add padding around the card container */
-  background-color:#bb6565 ;
+  background-image: url(../public/pexels-pixabay-159291.jpg);
   
 }
 
 .card {
+  color: rgb(181, 37, 37);
   width: calc(33.33% - 20px);
   margin-bottom: 20px;
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 7px 6px rgba(226, 76, 7, 0.966);
-  background-color:gold; /* Light gray background color */
+  background-color:rgb(225, 0, 255); /* Light gray background color */
 }
 
 .card-title {
@@ -30,7 +42,7 @@
 
 .card-text {
   font-size: 14px;
-  color:whitesmoke ;
+  color:rgb(12, 12, 12) ;
   margin-bottom: 10px;
 }
 

@@ -2,15 +2,15 @@
 import React from 'react';
 
 function Contact() {
-    const handleClick = () => {
-        alert('You clicked on the Contact page!');
-    };
+    // const handleClick = () => {
+    //     alert('You clicked on the Contact page!');
+    // };
 
     return (
         <div>
-            <h2>Contact</h2>
-            <p>Contact page content</p>
-            <button onClick={handleClick}>Click me</button>
+            <h2 className='text-white'>Contact</h2>
+            <p className='text-white'>Contact page content</p>
+           
         </div>
     );
 }

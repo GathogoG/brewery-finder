@@ -23,15 +23,15 @@ function BreweryPage() {
 
     return (
 <>
-<div>
+<div  className={'text-center'}>
   <Input
     placeholder="Search for a brewery" // Search input placeholder text
-    // value={search}
      onChange={handleSearch} // Handle input change to update search state
   />
+  <i className="bi bi-search"></i>
 </div>
 
-<FilterComponent items={brewerys} setFilter={setFilter} />
+<FilterComponent items={brewerys} setFilter={setFilter}/>
 {/* <BreweryFilter/> */}
       <div className="card-container">
         {breweries.map((brewery) => (

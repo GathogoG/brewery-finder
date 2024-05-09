@@ -8,7 +8,7 @@ const FilterComponent = ({ items, setFilter }) => {
 
   return (
     <div>
-      <label htmlFor="filter">Filter by State:</label>
+      <label className='text-white' htmlFor="filter">Filter by State:</label>
       <select id="filter" onChange={handleFilterChange}>
       <option value="">Select...</option>
       {items.map((item) => (
