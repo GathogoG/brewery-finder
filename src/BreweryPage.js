@@ -1,10 +1,9 @@
 import brewerys from './db.json'
-//import React from 'react'
 import './App.css';
 import {  Input  } from "@chakra-ui/react";
 import React, { useState } from "react";
 import FilterComponent from './FilteredComponent';
-//import BreweryFilter from './BreweryFilter';
+
 
 function BreweryPage() {
      const [search, setSearch] = useState(""); // Initialize state for search input value
@@ -32,7 +31,6 @@ function BreweryPage() {
 </div>
 
 <FilterComponent items={brewerys} setFilter={setFilter}/>
-{/* <BreweryFilter/> */}
       <div className="card-container">
         {breweries.map((brewery) => (
           <div className="card" key={brewery.id}>
