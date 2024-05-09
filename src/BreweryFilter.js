@@ -36,12 +36,21 @@ const BreweryFilter = () => {
           </option>
         ))}
       </select>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
-        {breweries.map(brewery => (
-          <div key={brewery.id} style={{ padding: '20px', boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.1)', border: '1px solid #ccc' }}>
-            <h3>{brewery.name}</h3>
-            <p>Location: {brewery.city}, {brewery.state}</p>
-            <p>Type: {brewery.brewery_type}</p>
+      <div className="card-container">
+        {breweries.map((brewery) => (
+          <div className="card" key={brewery.id}>
+            <div className="card-body">
+              <h5 className="card-title">{brewery.name}</h5>
+              <h6 className="card-subtitle">{brewery.brewery_type}</h6>
+              <p className="card-text">
+              {brewery.address_1},{brewery.address_2},{brewery.address_3}<br />
+                {brewery.city}, {brewery.state}, {brewery.postal_code}<br />
+                Country: {brewery.country}<br />
+                Latitude: {brewery.latitude}, Longitude: {brewery.longitude}
+              </p>
+              <a href={`tel:${brewery.phone}`} className="card-link">{brewery.phone}</a>
+              <a href={brewery.website_url} className="card-link" target="_blank" rel="noopener noreferrer">{brewery.website_url}</a>
+            </div>
           </div>
         ))}
       </div>
