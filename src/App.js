@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import Navbar from './components/NavBar';
 import SearchBar from "./components/SearchBar";
+// App.jsx
+import React from 'react';
+import BreweryFilter from './BreweryFilter';
+// import Navbar from './components/NavBar';
 import BreweryPage from "./BreweryPage";
-// import BreweryFilter from './BreweryFilter';
-
+//import SearchBar from "./components/SearchBar";
 
 function App() {
   const [breweries, setBreweries] = useState(require('./db.json')); // Import breweries directly into state
@@ -17,13 +20,11 @@ function App() {
       );
 
   return (
-    <>
-      <Navbar />
-      {/* <BreweryFilter breweries={breweries} setBreweries={setBreweries} /> */}
-      <SearchBar search={search} setSearch={setSearch} />
-      <BreweryPage breweries={filteredBreweries} />
-    </>
-  );
-}
-
+  <>
+  <Navbar />
+  <BreweryFilter/>
+  {/* <SearchBar/> */}
+      <BreweryPage />
+      </>)}
+ 
 export default App;
